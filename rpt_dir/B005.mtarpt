@@ -1,0 +1,669 @@
+VERSION {1.0}
+PTDEF {instance} {pin} {cell} {edge} {clock_edge} {clock} {phase}
+BANNER
+  {Module} {ExampleRocketSystem_N7_LEC}
+  {Timing} {LATE}
+  {Slew Propagation} {WORST}
+  {Operating Condition} {ssgnp_0p675v_m40c_cworst_CCworst_T}
+  {PVT Mode} {max}
+  {Tree Type} {balanced}
+  {Process} {1.000}
+  {Voltage} {0.675}
+  {Temperature} {-40.000}
+  {time unit} {1.000 ns}
+  {capacitance unit} {1.000 pF}
+  {resistance unit} {1.000 kOhm}
+  {TOOL} {v20.13-s083_1 ((64bit) 01/19/2021 16:51 (Linux 2.6.32-431.11.2.el6.x86_64))}
+  {DATE} {February 15, 2023}
+END_BANNER
+PATH 1
+  VIEW  WorstLT_cworst_CCworst_T_func
+  CHECK_TYPE {Recovery Check}
+  REF {tile_prci_domain_tile_reset_domain_tile_dcache/data_data_arrays_0_data_arrays_0_ext_1_memory_32x256_12} {CLK}
+  ENDPT {tile_prci_domain_tile_reset_domain_tile_dcache/data_data_arrays_0_data_arrays_0_ext_1_memory_32x256_12} {SD} {TS6N7LVTB32X16M1WBZHOCP} {v} {leading} {CPU_CLK} {CPU_CLK(C)(P)(WorstLT_cworst_CCworst_T_func)*}
+  BEGINPT {tile_prci_domain_tile_reset_domain_tile_dcache/s2_data_reg_33_} {QN} {SDFQND2BWP300H8P64PDLVT} {^} {leading} {CPU_CLK} {CPU_CLK(D)(P)(WorstLT_cworst_CCworst_T_func)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {Recovery} {4.450}
+    {+} {Phase Shift} {0.833}
+    {+} {CPPR Adjustment} {0.000}
+    {-} {Uncertainty} {0.100}
+    {=} {Required Time} {-3.717}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {2.098}
+    {=} {Slack Time} {-5.815}
+  END_SLK_CLC
+  SLK -5.815
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {=} {Beginpoint Arrival Time} {0.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    PORT {} {clock} {^} {} {} {clock} {} {} {} {0.000} {0.000} {0.000} {-5.815} {} {10} {(621.66, 0.00) } 
+    NET {} {} {} {} {} {clock} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-5.815} {} {} {} 
+    INST {snps_occ_controller/fast_clk_clkgt/U2} {A2} {^} {Z} {^} {} {AN2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-5.815} {} {1} {(611.01, 2.24) (610.94, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n5} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-5.815} {} {} {} 
+    INST {snps_occ_controller/U2} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-5.815} {} {1} {(608.83, 2.24) (608.90, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n1} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-5.815} {} {} {} 
+    INST {snps_occ_controller/U1} {B1} {v} {ZN} {^} {} {IND2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-5.815} {} {607} {(609.98, 3.44) (609.92, 3.45)} 
+    NET {} {} {} {} {} {subsystem_cbus_auto_fixedClockNode_out_0_clock} {} {0.000} {0.000} {0.003} {0.000} {0.000} {-5.815} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/latch} {CP} {^} {Q} {^} {} {CKLNQD1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-5.815} {} {1} {(303.17, 387.44) (303.42, 387.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/n6} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-5.815} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/U1} {I0} {^} {Z} {^} {} {MUX2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-5.815} {} {64} {(304.32, 386.84) (304.26, 386.85)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/net105655} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-5.815} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/s2_data_reg_33_} {CP} {^} {QN} {^} {} {SDFQND2BWP300H8P64PDLVT} {0.040} {0.000} {0.014} {} {0.040} {-5.776} {} {1} {(129.66, 134.56) (129.15, 134.20)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/n4719} {} {0.000} {0.000} {0.016} {0.003} {0.040} {-5.775} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/tg_35051} {I} {^} {Z} {^} {} {BUFFD18BWP300H8P64PDLVT} {0.020} {0.000} {0.008} {} {0.059} {-5.756} {} {2} {(128.58, 134.84) (129.92, 134.85)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/MN_35051} {} {0.563} {0.000} {1.068} {0.108} {0.623} {-5.193} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U153} {I} {^} {ZN} {v} {} {INVD16BWP300H8P64PDLVT} {0.143} {0.000} {0.134} {} {0.766} {-5.049} {} {9} {(375.30, 331.36) (374.91, 331.35)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/n4720} {} {0.029} {0.000} {0.113} {0.022} {0.795} {-5.020} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U8130} {I1} {v} {Z} {v} {} {MUX2D2BWP300H8P64PDLVT} {0.069} {0.000} {0.038} {} {0.865} {-4.951} {} {4} {(374.85, 386.24) (374.27, 386.25)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core_io_fpu_dmem_resp_data[1]} {} {0.015} {0.000} {0.060} {0.015} {0.879} {-4.936} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U124} {A1} {v} {ZN} {v} {} {IOA21D4BWP300H8P64PDLVT} {0.033} {0.000} {0.006} {} {0.912} {-4.903} {} {1} {(353.41, 423.48) (353.79, 423.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n9047} {} {0.000} {0.000} {0.007} {0.001} {0.912} {-4.903} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U123} {A1} {v} {ZN} {^} {} {ND2SKND2BWP300H8P64PDLVT} {0.007} {0.000} {0.014} {} {0.919} {-4.896} {} {1} {(354.18, 423.80) (354.05, 423.75)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n9965} {} {0.000} {0.000} {0.011} {0.001} {0.919} {-4.896} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U937} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.037} {0.000} {0.050} {} {0.957} {-4.859} {} {2} {(353.09, 424.04) (353.15, 424.05)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core_io_fpu_fromint_data[1]} {} {0.001} {0.000} {0.053} {0.004} {0.957} {-4.858} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U3036} {I0} {v} {Z} {v} {} {MUX2D2BWP300H8P64PDLVT} {0.045} {0.000} {0.019} {} {1.003} {-4.812} {} {1} {(341.44, 421.64) (341.25, 421.65)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n20415} {} {0.002} {0.000} {0.024} {0.006} {1.004} {-4.811} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U3031} {A2} {v} {ZN} {^} {} {ND2OPTPAD12BWP300H8P64PDLVT} {0.014} {0.000} {0.014} {} {1.019} {-4.796} {} {4} {(342.40, 422.56) (342.53, 422.60)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n19220} {} {0.002} {0.000} {0.016} {0.008} {1.021} {-4.794} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U3826} {A1} {^} {ZN} {v} {} {ND2SKND4BWP300H8P64PDLVT} {0.011} {0.000} {0.009} {} {1.032} {-4.783} {} {2} {(342.34, 424.64) (342.14, 424.65)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n19320} {} {0.000} {0.000} {0.010} {0.002} {1.032} {-4.783} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U3829} {A2} {v} {ZN} {v} {} {IOA21D4BWP300H8P64PDLVT} {0.020} {0.000} {0.007} {} {1.052} {-4.763} {} {2} {(342.40, 425.80) (342.91, 425.85)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n19095} {} {0.000} {0.000} {0.009} {0.002} {1.052} {-4.763} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U3857} {A1} {v} {ZN} {^} {} {OAI31SKNOPTLD4BWP300H8P64PDLVT} {0.023} {0.000} {0.029} {} {1.075} {-4.740} {} {3} {(342.40, 425.60) (342.91, 425.60)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n12071} {} {0.001} {0.000} {0.036} {0.005} {1.076} {-4.739} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U576} {B1} {^} {ZN} {v} {} {INR2D6BWP300H8P64PDLVT} {0.019} {0.000} {0.014} {} {1.095} {-4.721} {} {2} {(340.48, 425.20) (340.35, 425.25)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n16573} {} {0.001} {0.000} {0.013} {0.004} {1.095} {-4.720} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U122} {B1} {v} {ZN} {^} {} {INR2D8BWP300H8P64PDLVT} {0.011} {0.000} {0.007} {} {1.106} {-4.709} {} {2} {(340.35, 425.00) (340.22, 424.95)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n9153} {} {0.000} {0.000} {0.009} {0.003} {1.107} {-4.708} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U1523} {A1} {^} {ZN} {v} {} {OAI31SKNOPTLD4BWP300H8P64PDLVT} {0.016} {0.000} {0.019} {} {1.122} {-4.693} {} {3} {(339.97, 423.80) (340.48, 423.80)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n18912} {} {0.001} {0.000} {0.024} {0.004} {1.123} {-4.692} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U9657} {B1} {v} {ZN} {^} {} {INR2OPTPAD4BWP300H8P64PDLVT} {0.013} {0.000} {0.008} {} {1.137} {-4.678} {} {2} {(337.79, 422.80) (337.54, 422.85)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n18915} {} {0.000} {0.000} {0.010} {0.002} {1.137} {-4.678} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U11081} {A1} {^} {ZN} {^} {} {IOA21D4BWP300H8P64PDLVT} {0.023} {0.000} {0.017} {} {1.160} {-4.655} {} {2} {(336.77, 423.12) (337.15, 423.15)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core_io_dmem_req_bits_addr[11]} {} {0.004} {0.000} {0.022} {0.007} {1.163} {-4.652} {} {} {} 
+    INST {U2156} {A1} {^} {ZN} {^} {} {IOA21D4BWP300H8P64PDLVT} {0.027} {0.000} {0.016} {} {1.190} {-4.625} {} {3} {(332.03, 402.48) (332.42, 402.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcacheArb_io_mem_req_bits_addr[11]} {} {0.001} {0.000} {0.019} {0.005} {1.191} {-4.624} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U156} {A1} {^} {ZN} {^} {} {IOA21D4BWP300H8P64PDLVT} {0.023} {0.000} {0.009} {} {1.214} {-4.601} {} {1} {(333.57, 399.12) (333.95, 399.15)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/n12841} {} {0.000} {0.000} {0.010} {0.003} {1.214} {-4.601} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/tg_35060} {I} {^} {Z} {^} {} {BUFFD18BWP300H8P64PDLVT} {0.017} {0.000} {0.007} {} {1.232} {-4.584} {} {1} {(333.63, 399.44) (334.98, 399.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/MN_35060} {} {0.234} {0.000} {0.400} {0.062} {1.466} {-4.349} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/tg_35061} {I} {^} {Z} {^} {} {BUFFD18BWP300H8P64PDLVT} {0.086} {0.000} {0.022} {} {1.552} {-4.263} {} {6} {(333.50, 172.04) (334.85, 172.05)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/MN_35061} {} {0.142} {0.000} {0.400} {0.060} {1.694} {-4.121} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U1507} {B1} {^} {ZN} {v} {} {INR2D8BWP300H8P64PDLVT} {0.066} {0.000} {0.051} {} {1.760} {-4.055} {} {1} {(124.80, 168.40) (124.67, 168.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/n13231} {} {0.001} {0.000} {0.038} {0.003} {1.761} {-4.054} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/tg_35058} {I} {v} {Z} {v} {} {BUFFD16BWP300H8P64PDLVT} {0.025} {0.000} {0.007} {} {1.786} {-4.029} {} {1} {(124.29, 167.84) (125.44, 167.85)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/MN_35058} {} {0.031} {0.000} {0.111} {0.030} {1.818} {-3.997} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U566} {I} {v} {ZN} {^} {} {INVD18BWP300H8P64PDLVT} {0.026} {0.000} {0.023} {} {1.844} {-3.971} {} {2} {(125.44, 75.16) (125.06, 75.15)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/n5085} {} {0.001} {0.000} {0.022} {0.012} {1.845} {-3.970} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U308} {I} {^} {ZN} {v} {} {INVD18BWP300H8P64PDLVT} {0.011} {0.000} {0.009} {} {1.855} {-3.960} {} {10} {(124.67, 75.44) (124.29, 75.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/n4843} {} {0.243} {0.000} {0.449} {0.143} {2.098} {-3.717} {} {} {} 
+  END_DATA_PATH
+  OTHER_ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {=} {Beginpoint Arrival Time} {0.000}
+  END_OTHER_ARR_CLC
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    PORT {} {clock} {^} {} {} {clock} {} {} {} {0.000} {0.000} {0.000} {5.815} {} {10} {(621.66, 0.00) } 
+    NET {} {} {} {} {} {clock} {} {0.000} {0.000} {0.000} {0.000} {0.000} {5.815} {} {} {} 
+    INST {snps_occ_controller/fast_clk_clkgt/U2} {A2} {^} {Z} {^} {} {AN2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {5.815} {} {1} {(611.01, 2.24) (610.94, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n5} {} {0.000} {0.000} {0.000} {0.000} {0.000} {5.815} {} {} {} 
+    INST {snps_occ_controller/U2} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {5.815} {} {1} {(608.83, 2.24) (608.90, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n1} {} {0.000} {0.000} {0.000} {0.000} {0.000} {5.815} {} {} {} 
+    INST {snps_occ_controller/U1} {B1} {v} {ZN} {^} {} {IND2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {5.815} {} {607} {(609.98, 3.44) (609.92, 3.45)} 
+    NET {} {} {} {} {} {subsystem_cbus_auto_fixedClockNode_out_0_clock} {} {0.000} {0.000} {0.000} {0.000} {0.000} {5.815} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 1
+PATH 2
+  VIEW  WorstLT_cworst_CCworst_T_func
+  CHECK_TYPE {Setup Check}
+  REF {tile_prci_domain_tile_reset_domain_tile_fpuOpt/ifpu/inPipe_bits_in1_reg_1_} {CP}
+  ENDPT {tile_prci_domain_tile_reset_domain_tile_fpuOpt/ifpu/inPipe_bits_in1_reg_1_} {D} {SDFQD4BWP300H11P64PDSVT} {v} {leading} {CPU_CLK} {CPU_CLK(C)(P)(WorstLT_cworst_CCworst_T_func)*}
+  BEGINPT {tile_prci_domain_tile_reset_domain_tile_dcache/s2_data_reg_33_} {QN} {SDFQND2BWP300H8P64PDLVT} {^} {leading} {CPU_CLK} {CPU_CLK(D)(P)(WorstLT_cworst_CCworst_T_func)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {Setup} {0.045}
+    {+} {Phase Shift} {0.833}
+    {+} {CPPR Adjustment} {0.000}
+    {-} {Uncertainty} {0.100}
+    {=} {Required Time} {0.688}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1.019}
+    {=} {Slack Time} {-0.331}
+  END_SLK_CLC
+  SLK -0.331
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {=} {Beginpoint Arrival Time} {0.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    PORT {} {clock} {^} {} {} {clock} {} {} {} {0.000} {0.000} {0.000} {-0.331} {} {10} {(621.66, 0.00) } 
+    NET {} {} {} {} {} {clock} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.331} {} {} {} 
+    INST {snps_occ_controller/fast_clk_clkgt/U2} {A2} {^} {Z} {^} {} {AN2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.331} {} {1} {(611.01, 2.24) (610.94, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n5} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.331} {} {} {} 
+    INST {snps_occ_controller/U2} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.331} {} {1} {(608.83, 2.24) (608.90, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n1} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.331} {} {} {} 
+    INST {snps_occ_controller/U1} {B1} {v} {ZN} {^} {} {IND2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.331} {} {607} {(609.98, 3.44) (609.92, 3.45)} 
+    NET {} {} {} {} {} {subsystem_cbus_auto_fixedClockNode_out_0_clock} {} {0.000} {0.000} {0.003} {0.000} {0.000} {-0.331} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/latch} {CP} {^} {Q} {^} {} {CKLNQD1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.331} {} {1} {(303.17, 387.44) (303.42, 387.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/n6} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.331} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/U1} {I0} {^} {Z} {^} {} {MUX2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.331} {} {64} {(304.32, 386.84) (304.26, 386.85)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/net105655} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.331} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/s2_data_reg_33_} {CP} {^} {QN} {^} {} {SDFQND2BWP300H8P64PDLVT} {0.040} {0.000} {0.014} {} {0.040} {-0.291} {} {1} {(129.66, 134.56) (129.15, 134.20)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/n4719} {} {0.000} {0.000} {0.016} {0.003} {0.040} {-0.291} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/tg_35051} {I} {^} {Z} {^} {} {BUFFD18BWP300H8P64PDLVT} {0.020} {0.000} {0.008} {} {0.059} {-0.272} {} {2} {(128.58, 134.84) (129.92, 134.85)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/MN_35051} {} {0.563} {0.000} {1.068} {0.108} {0.623} {0.292} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U153} {I} {^} {ZN} {v} {} {INVD16BWP300H8P64PDLVT} {0.143} {0.000} {0.134} {} {0.766} {0.435} {} {9} {(375.30, 331.36) (374.91, 331.35)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/n4720} {} {0.029} {0.000} {0.113} {0.022} {0.795} {0.464} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U8130} {I1} {v} {Z} {v} {} {MUX2D2BWP300H8P64PDLVT} {0.069} {0.000} {0.038} {} {0.865} {0.534} {} {4} {(374.85, 386.24) (374.27, 386.25)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core_io_fpu_dmem_resp_data[1]} {} {0.015} {0.000} {0.060} {0.015} {0.879} {0.548} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U124} {A1} {v} {ZN} {v} {} {IOA21D4BWP300H8P64PDLVT} {0.033} {0.000} {0.006} {} {0.912} {0.581} {} {1} {(353.41, 423.48) (353.79, 423.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n9047} {} {0.000} {0.000} {0.007} {0.001} {0.912} {0.581} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U123} {A1} {v} {ZN} {^} {} {ND2SKND2BWP300H8P64PDLVT} {0.007} {0.000} {0.014} {} {0.919} {0.588} {} {1} {(354.18, 423.80) (354.05, 423.75)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n9965} {} {0.000} {0.000} {0.011} {0.001} {0.919} {0.588} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U937} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.037} {0.000} {0.050} {} {0.957} {0.626} {} {2} {(353.09, 424.04) (353.15, 424.05)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core_io_fpu_fromint_data[1]} {} {0.000} {0.000} {0.053} {0.004} {0.957} {0.626} {} {} {} 
+    INST {tg_35035} {I} {v} {Z} {v} {} {BUFFD0BWP300H8P64PDLVT} {0.033} {0.000} {0.015} {} {0.990} {0.659} {} {1} {(352.77, 424.64) (352.83, 424.65)} 
+    NET {} {} {} {} {} {MN_35035} {} {0.001} {0.000} {0.019} {0.002} {0.991} {0.660} {} {} {} 
+    INST {tg_35036} {I} {v} {Z} {v} {} {BUFFD10BWP300H8P64PDLVT} {0.019} {0.000} {0.007} {} {1.010} {0.679} {} {2} {(352.70, 424.36) (353.54, 424.35)} 
+    NET {} {} {} {} {} {MN_35036} {} {0.009} {0.000} {0.018} {0.012} {1.019} {0.688} {} {} {} 
+  END_DATA_PATH
+  OTHER_ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {=} {Beginpoint Arrival Time} {0.000}
+  END_OTHER_ARR_CLC
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    PORT {} {clock} {^} {} {} {clock} {} {} {} {0.000} {0.000} {0.000} {0.331} {} {10} {(621.66, 0.00) } 
+    NET {} {} {} {} {} {clock} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.331} {} {} {} 
+    INST {snps_occ_controller/fast_clk_clkgt/U2} {A2} {^} {Z} {^} {} {AN2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.331} {} {1} {(611.01, 2.24) (610.94, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n5} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.331} {} {} {} 
+    INST {snps_occ_controller/U2} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.331} {} {1} {(608.83, 2.24) (608.90, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n1} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.331} {} {} {} 
+    INST {snps_occ_controller/U1} {B1} {v} {ZN} {^} {} {IND2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.331} {} {607} {(609.98, 3.44) (609.92, 3.45)} 
+    NET {} {} {} {} {} {subsystem_cbus_auto_fixedClockNode_out_0_clock} {} {0.000} {0.000} {0.003} {0.000} {0.000} {0.331} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_fpuOpt/ifpu/clk_gate_inPipe_bits_in1_reg/latch} {CP} {^} {Q} {^} {} {CKLNQD1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.331} {} {1} {(427.58, 447.44) (427.84, 447.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_fpuOpt/ifpu/clk_gate_inPipe_bits_in1_reg/n6} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.331} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_fpuOpt/ifpu/clk_gate_inPipe_bits_in1_reg/U1} {I0} {^} {Z} {^} {} {MUX2D2BWP300H8P64PDLVT} {0.000} {0.000} {0.000} {} {0.000} {0.331} {} {71} {(427.46, 447.76) (427.26, 447.75)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_fpuOpt/ifpu/net79087} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.331} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 2
+PATH 3
+  VIEW  WorstLT_cworst_CCworst_T_func
+  CHECK_TYPE {Setup Check}
+  REF {tile_prci_domain_tile_reset_domain_tile_core/div/remainder_reg_1_} {CP}
+  ENDPT {tile_prci_domain_tile_reset_domain_tile_core/div/remainder_reg_1_} {D} {SDFQD2BWP300H11P64PDSVT} {v} {leading} {CPU_CLK} {CPU_CLK(C)(P)(WorstLT_cworst_CCworst_T_func)*}
+  BEGINPT {tile_prci_domain_tile_reset_domain_tile_dcache/s2_data_reg_33_} {QN} {SDFQND2BWP300H8P64PDLVT} {^} {leading} {CPU_CLK} {CPU_CLK(D)(P)(WorstLT_cworst_CCworst_T_func)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {Setup} {0.048}
+    {+} {Phase Shift} {0.833}
+    {+} {CPPR Adjustment} {0.000}
+    {-} {Uncertainty} {0.100}
+    {=} {Required Time} {0.685}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1.218}
+    {=} {Slack Time} {-0.533}
+  END_SLK_CLC
+  SLK -0.533
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {=} {Beginpoint Arrival Time} {0.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    PORT {} {clock} {^} {} {} {clock} {} {} {} {0.000} {0.000} {0.000} {-0.533} {} {10} {(621.66, 0.00) } 
+    NET {} {} {} {} {} {clock} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.533} {} {} {} 
+    INST {snps_occ_controller/fast_clk_clkgt/U2} {A2} {^} {Z} {^} {} {AN2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.533} {} {1} {(611.01, 2.24) (610.94, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n5} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.533} {} {} {} 
+    INST {snps_occ_controller/U2} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.533} {} {1} {(608.83, 2.24) (608.90, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n1} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.533} {} {} {} 
+    INST {snps_occ_controller/U1} {B1} {v} {ZN} {^} {} {IND2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.533} {} {607} {(609.98, 3.44) (609.92, 3.45)} 
+    NET {} {} {} {} {} {subsystem_cbus_auto_fixedClockNode_out_0_clock} {} {0.000} {0.000} {0.003} {0.000} {0.000} {-0.533} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/latch} {CP} {^} {Q} {^} {} {CKLNQD1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.533} {} {1} {(303.17, 387.44) (303.42, 387.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/n6} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.533} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/U1} {I0} {^} {Z} {^} {} {MUX2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.533} {} {64} {(304.32, 386.84) (304.26, 386.85)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/net105655} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.533} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/s2_data_reg_33_} {CP} {^} {QN} {^} {} {SDFQND2BWP300H8P64PDLVT} {0.040} {0.000} {0.014} {} {0.040} {-0.493} {} {1} {(129.66, 134.56) (129.15, 134.20)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/n4719} {} {0.000} {0.000} {0.016} {0.003} {0.040} {-0.493} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/tg_35051} {I} {^} {Z} {^} {} {BUFFD18BWP300H8P64PDLVT} {0.020} {0.000} {0.008} {} {0.059} {-0.474} {} {2} {(128.58, 134.84) (129.92, 134.85)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/MN_35051} {} {0.563} {0.000} {1.068} {0.108} {0.623} {0.090} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U153} {I} {^} {ZN} {v} {} {INVD16BWP300H8P64PDLVT} {0.143} {0.000} {0.134} {} {0.766} {0.233} {} {9} {(375.30, 331.36) (374.91, 331.35)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/n4720} {} {0.029} {0.000} {0.113} {0.022} {0.795} {0.262} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U8130} {I1} {v} {Z} {v} {} {MUX2D2BWP300H8P64PDLVT} {0.069} {0.000} {0.038} {} {0.865} {0.332} {} {4} {(374.85, 386.24) (374.27, 386.25)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core_io_fpu_dmem_resp_data[1]} {} {0.015} {0.000} {0.060} {0.015} {0.879} {0.346} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U124} {A1} {v} {ZN} {v} {} {IOA21D4BWP300H8P64PDLVT} {0.033} {0.000} {0.006} {} {0.912} {0.379} {} {1} {(353.41, 423.48) (353.79, 423.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n9047} {} {0.000} {0.000} {0.007} {0.001} {0.912} {0.379} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U123} {A1} {v} {ZN} {^} {} {ND2SKND2BWP300H8P64PDLVT} {0.007} {0.000} {0.014} {} {0.919} {0.386} {} {1} {(354.18, 423.80) (354.05, 423.75)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n9965} {} {0.000} {0.000} {0.011} {0.001} {0.919} {0.386} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U937} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.037} {0.000} {0.050} {} {0.957} {0.424} {} {2} {(353.09, 424.04) (353.15, 424.05)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core_io_fpu_fromint_data[1]} {} {0.000} {0.000} {0.053} {0.004} {0.957} {0.424} {} {} {} 
+    INST {tg_35035} {I} {v} {Z} {v} {} {BUFFD0BWP300H8P64PDLVT} {0.033} {0.000} {0.015} {} {0.990} {0.457} {} {1} {(352.77, 424.64) (352.83, 424.65)} 
+    NET {} {} {} {} {} {MN_35035} {} {0.001} {0.000} {0.019} {0.002} {0.991} {0.458} {} {} {} 
+    INST {tg_35036} {I} {v} {Z} {v} {} {BUFFD10BWP300H8P64PDLVT} {0.019} {0.000} {0.007} {} {1.010} {0.477} {} {2} {(352.70, 424.36) (353.54, 424.35)} 
+    NET {} {} {} {} {} {MN_35036} {} {0.006} {0.000} {0.022} {0.012} {1.016} {0.483} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/div/U7297} {A1} {v} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.036} {0.000} {0.018} {} {1.052} {0.519} {} {1} {(361.98, 439.92) (362.24, 439.95)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/div/n12529} {} {0.000} {0.000} {0.019} {0.001} {1.052} {0.519} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/div/U7298} {B} {v} {ZN} {^} {} {IAO21D1BWP300H11P64PDSVT} {0.021} {0.000} {0.017} {} {1.073} {0.540} {} {1} {(362.18, 441.80) (362.24, 441.75)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/div/n12531} {} {-0.000} {0.000} {0.020} {0.001} {1.073} {0.540} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/div/U7299} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.021} {0.000} {0.018} {} {1.094} {0.561} {} {1} {(361.92, 442.36) (361.98, 442.35)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/div/n12535} {} {-0.000} {0.000} {0.020} {0.001} {1.094} {0.561} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/div_opt/U7302} {B} {v} {Z} {v} {} {AO211D1BWP300H11P64PDSVT} {0.064} {0.000} {0.023} {} {1.158} {0.625} {} {1} {(361.79, 443.80) (362.18, 443.85)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/div/n12536} {} {0.001} {0.000} {0.023} {0.002} {1.158} {0.625} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/div/U7303} {B} {v} {ZN} {^} {} {IAO21D1BWP300H11P64PDSVT} {0.030} {0.000} {0.028} {} {1.188} {0.655} {} {1} {(365.12, 448.60) (365.18, 448.65)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/div/n12537} {} {0.000} {0.000} {0.030} {0.001} {1.188} {0.655} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/div_opt/U7304} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.029} {0.000} {0.024} {} {1.217} {0.685} {} {1} {(367.42, 450.44) (367.49, 450.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/div/N382} {} {0.000} {0.000} {0.024} {0.002} {1.218} {0.685} {} {} {} 
+  END_DATA_PATH
+  OTHER_ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {=} {Beginpoint Arrival Time} {0.000}
+  END_OTHER_ARR_CLC
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    PORT {} {clock} {^} {} {} {clock} {} {} {} {0.000} {0.000} {0.000} {0.533} {} {10} {(621.66, 0.00) } 
+    NET {} {} {} {} {} {clock} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.533} {} {} {} 
+    INST {snps_occ_controller/fast_clk_clkgt/U2} {A2} {^} {Z} {^} {} {AN2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.533} {} {1} {(611.01, 2.24) (610.94, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n5} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.533} {} {} {} 
+    INST {snps_occ_controller/U2} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.533} {} {1} {(608.83, 2.24) (608.90, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n1} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.533} {} {} {} 
+    INST {snps_occ_controller/U1} {B1} {v} {ZN} {^} {} {IND2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.533} {} {607} {(609.98, 3.44) (609.92, 3.45)} 
+    NET {} {} {} {} {} {subsystem_cbus_auto_fixedClockNode_out_0_clock} {} {0.000} {0.000} {0.003} {0.000} {0.000} {0.533} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/div/clk_gate_remainder_reg/latch} {CP} {^} {Q} {^} {} {CKLNQD1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.533} {} {2} {(347.20, 442.64) (347.46, 442.65)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/div/net74630} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.533} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/div/U1821} {I0} {^} {Z} {^} {} {MUX2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.533} {} {127} {(347.84, 441.44) (347.90, 441.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/div/n13156} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.533} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 3
+PATH 4
+  VIEW  WorstLT_cworst_CCworst_T_func
+  CHECK_TYPE {Setup Check}
+  REF {tile_prci_domain_tile_reset_domain_tile_core/ex_reg_rs_msb_1_reg_0_} {CP}
+  ENDPT {tile_prci_domain_tile_reset_domain_tile_core/ex_reg_rs_msb_1_reg_0_} {D} {SDFQD1BWP300H11P64PDSVT} {v} {leading} {CPU_CLK} {CPU_CLK(C)(P)(WorstLT_cworst_CCworst_T_func)*}
+  BEGINPT {tile_prci_domain_tile_reset_domain_tile_dcache/s2_data_reg_34_} {Q} {SDFQD2BWP300H11P64PDSVT} {v} {leading} {CPU_CLK} {CPU_CLK(D)(P)(WorstLT_cworst_CCworst_T_func)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {Setup} {0.055}
+    {+} {Phase Shift} {0.833}
+    {+} {CPPR Adjustment} {0.000}
+    {-} {Uncertainty} {0.100}
+    {=} {Required Time} {0.678}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {0.982}
+    {=} {Slack Time} {-0.304}
+  END_SLK_CLC
+  SLK -0.304
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {=} {Beginpoint Arrival Time} {0.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    PORT {} {clock} {^} {} {} {clock} {} {} {} {0.000} {0.000} {0.000} {-0.304} {} {10} {(621.66, 0.00) } 
+    NET {} {} {} {} {} {clock} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.304} {} {} {} 
+    INST {snps_occ_controller/fast_clk_clkgt/U2} {A2} {^} {Z} {^} {} {AN2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.304} {} {1} {(611.01, 2.24) (610.94, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n5} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.304} {} {} {} 
+    INST {snps_occ_controller/U2} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.304} {} {1} {(608.83, 2.24) (608.90, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n1} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.304} {} {} {} 
+    INST {snps_occ_controller/U1} {B1} {v} {ZN} {^} {} {IND2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.304} {} {607} {(609.98, 3.44) (609.92, 3.45)} 
+    NET {} {} {} {} {} {subsystem_cbus_auto_fixedClockNode_out_0_clock} {} {0.000} {0.000} {0.003} {0.000} {0.000} {-0.304} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/latch} {CP} {^} {Q} {^} {} {CKLNQD1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.304} {} {1} {(303.17, 387.44) (303.42, 387.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/n6} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.304} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/U1} {I0} {^} {Z} {^} {} {MUX2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.304} {} {64} {(304.32, 386.84) (304.26, 386.85)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/net105655} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.304} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/s2_data_reg_34_} {CP} {^} {Q} {v} {} {SDFQD2BWP300H11P64PDSVT} {0.071} {0.000} {0.016} {} {0.071} {-0.233} {} {3} {(375.94, 134.56) (375.42, 134.20)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_auto_tl_other_masters_out_c_bits_data[34]} {} {0.000} {0.000} {0.017} {0.003} {0.071} {-0.233} {} {} {} 
+    INST {trans_dv_33463} {I} {v} {Z} {v} {} {BUFFD8BWP300H8P64PDLVT} {0.026} {0.000} {0.020} {} {0.097} {-0.207} {} {7} {(377.34, 134.56) (377.98, 134.55)} 
+    NET {} {} {} {} {} {MN_33463} {} {0.336} {0.000} {0.400} {0.071} {0.433} {0.129} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U7156} {I1} {v} {Z} {v} {} {MUX2D2BWP300H8P64PDLVT} {0.102} {0.000} {0.017} {} {0.535} {0.230} {} {1} {(376.90, 372.76) (376.32, 372.75)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core_io_fpu_dmem_resp_data[2]} {} {0.000} {0.000} {0.016} {0.002} {0.535} {0.231} {} {} {} 
+    INST {trans_dv_33905} {I} {v} {Z} {v} {} {BUFFD8BWP300H8P64PDLVT} {0.019} {0.000} {0.009} {} {0.554} {0.250} {} {4} {(375.68, 373.04) (376.32, 373.05)} 
+    NET {} {} {} {} {} {MN_33905} {} {0.018} {0.000} {0.050} {0.019} {0.572} {0.268} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U8469} {A2} {v} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.050} {0.000} {0.017} {} {0.622} {0.318} {} {1} {(356.29, 403.40) (356.48, 403.35)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/n12006} {} {0.000} {0.000} {0.019} {0.001} {0.622} {0.318} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U8470} {B} {v} {Z} {v} {} {AO21D1BWP300H8P64PDLVT} {0.022} {0.000} {0.009} {} {0.644} {0.340} {} {1} {(354.75, 403.00) (354.50, 403.05)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcacheArb_io_requestor_0_resp_bits_data[2]} {} {0.000} {0.000} {0.009} {0.001} {0.644} {0.340} {} {} {} 
+    INST {trans_dv_33969} {I} {v} {Z} {v} {} {BUFFD3BWP300H8P64PDLVT} {0.024} {0.000} {0.032} {} {0.668} {0.364} {} {2} {(354.56, 403.36) (354.82, 403.35)} 
+    NET {} {} {} {} {} {MN_33969} {} {0.033} {0.000} {0.094} {0.044} {0.701} {0.397} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U2095} {A1} {v} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.097} {0.000} {0.072} {} {0.798} {0.494} {} {1} {(352.77, 429.72) (353.02, 429.75)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n9329} {} {0.002} {0.000} {0.074} {0.006} {0.800} {0.496} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U2096} {B} {v} {ZN} {^} {} {IAO21D1BWP300H11P64PDSVT} {0.042} {0.000} {0.023} {} {0.842} {0.538} {} {1} {(325.31, 429.80) (325.38, 429.75)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n9330} {} {-0.000} {0.000} {0.023} {0.001} {0.842} {0.538} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U2097} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.018} {0.000} {0.012} {} {0.860} {0.556} {} {1} {(325.31, 429.16) (325.38, 429.15)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n9331} {} {-0.000} {0.000} {0.013} {0.001} {0.860} {0.556} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/trans_dv_7801} {I} {v} {Z} {v} {} {BUFFD3BWP300H8P64PDLVT} {0.025} {0.000} {0.019} {} {0.885} {0.581} {} {1} {(325.38, 428.84) (325.63, 428.85)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/MN_7801} {} {0.006} {0.000} {0.026} {0.010} {0.891} {0.587} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U1603} {I} {v} {ZN} {^} {} {INVD2BWP300H8P64PDLVT} {0.018} {0.000} {0.013} {} {0.909} {0.605} {} {3} {(363.71, 418.96) (363.78, 418.95)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n13419} {} {0.000} {0.000} {0.015} {0.003} {0.909} {0.605} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U331} {I1} {^} {Z} {^} {} {MUX2D1BWP300H11P64PDSVT} {0.039} {0.000} {0.015} {} {0.949} {0.644} {} {1} {(367.81, 416.80) (368.26, 416.85)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n13427} {} {0.000} {0.000} {0.016} {0.001} {0.949} {0.644} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U6182} {B1} {^} {ZN} {v} {} {IND4D1BWP300H8P64PDLVT} {0.032} {0.000} {0.039} {} {0.981} {0.677} {} {1} {(366.66, 417.40) (366.72, 417.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/id_rs_1[2]} {} {0.001} {0.000} {0.040} {0.003} {0.982} {0.678} {} {} {} 
+  END_DATA_PATH
+  OTHER_ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {=} {Beginpoint Arrival Time} {0.000}
+  END_OTHER_ARR_CLC
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    PORT {} {clock} {^} {} {} {clock} {} {} {} {0.000} {0.000} {0.000} {0.304} {} {10} {(621.66, 0.00) } 
+    NET {} {} {} {} {} {clock} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.304} {} {} {} 
+    INST {snps_occ_controller/fast_clk_clkgt/U2} {A2} {^} {Z} {^} {} {AN2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.304} {} {1} {(611.01, 2.24) (610.94, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n5} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.304} {} {} {} 
+    INST {snps_occ_controller/U2} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.304} {} {1} {(608.83, 2.24) (608.90, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n1} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.304} {} {} {} 
+    INST {snps_occ_controller/U1} {B1} {v} {ZN} {^} {} {IND2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.304} {} {607} {(609.98, 3.44) (609.92, 3.45)} 
+    NET {} {} {} {} {} {subsystem_cbus_auto_fixedClockNode_out_0_clock} {} {0.000} {0.000} {0.003} {0.000} {0.000} {0.304} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/clk_gate_ex_reg_rs_bypass_1_reg/latch} {CP} {^} {Q} {^} {} {CKLNQD1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.304} {} {3} {(348.35, 418.96) (348.10, 418.95)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/net74561} {} {0.000} {0.000} {0.003} {0.000} {0.000} {0.304} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/clk_gate_ex_reg_rs_msb_1_reg/latch} {CP} {^} {Q} {^} {} {CKLNQD1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.304} {} {1} {(351.04, 419.24) (351.30, 419.25)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/clk_gate_ex_reg_rs_msb_1_reg/n6} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.304} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/clk_gate_ex_reg_rs_msb_1_reg/U1} {I0} {^} {Z} {^} {} {MUX2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.304} {} {62} {(358.98, 419.56) (359.04, 419.55)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/net74567} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.304} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 4
+PATH 5
+  VIEW  WorstLT_cworst_CCworst_T_func
+  CHECK_TYPE {Recovery Check}
+  REF {tile_prci_domain_tile_reset_domain_tile_dcache/data_data_arrays_0_data_arrays_0_ext_1_memory_32x256_12} {CLK}
+  ENDPT {tile_prci_domain_tile_reset_domain_tile_dcache/data_data_arrays_0_data_arrays_0_ext_1_memory_32x256_12} {SD} {TS6N7LVTB32X16M1WBZHOCP} {v} {leading} {CPU_CLK} {CPU_CLK(C)(P)(WorstLT_cworst_CCworst_T_func)*}
+  BEGINPT {tile_prci_domain_tile_reset_domain_tile_dcache/s2_data_reg_34_} {Q} {SDFQD2BWP300H11P64PDSVT} {v} {leading} {CPU_CLK} {CPU_CLK(D)(P)(WorstLT_cworst_CCworst_T_func)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {Recovery} {4.450}
+    {+} {Phase Shift} {0.833}
+    {+} {CPPR Adjustment} {0.000}
+    {-} {Uncertainty} {0.100}
+    {=} {Required Time} {-3.717}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1.753}
+    {=} {Slack Time} {-5.469}
+  END_SLK_CLC
+  SLK -5.469
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {=} {Beginpoint Arrival Time} {0.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    PORT {} {clock} {^} {} {} {clock} {} {} {} {0.000} {0.000} {0.000} {-5.469} {} {10} {(621.66, 0.00) } 
+    NET {} {} {} {} {} {clock} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-5.469} {} {} {} 
+    INST {snps_occ_controller/fast_clk_clkgt/U2} {A2} {^} {Z} {^} {} {AN2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-5.469} {} {1} {(611.01, 2.24) (610.94, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n5} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-5.469} {} {} {} 
+    INST {snps_occ_controller/U2} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-5.469} {} {1} {(608.83, 2.24) (608.90, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n1} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-5.469} {} {} {} 
+    INST {snps_occ_controller/U1} {B1} {v} {ZN} {^} {} {IND2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-5.469} {} {607} {(609.98, 3.44) (609.92, 3.45)} 
+    NET {} {} {} {} {} {subsystem_cbus_auto_fixedClockNode_out_0_clock} {} {0.000} {0.000} {0.003} {0.000} {0.000} {-5.469} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/latch} {CP} {^} {Q} {^} {} {CKLNQD1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-5.469} {} {1} {(303.17, 387.44) (303.42, 387.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/n6} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-5.469} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/U1} {I0} {^} {Z} {^} {} {MUX2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-5.469} {} {64} {(304.32, 386.84) (304.26, 386.85)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/net105655} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-5.469} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/s2_data_reg_34_} {CP} {^} {Q} {v} {} {SDFQD2BWP300H11P64PDSVT} {0.071} {0.000} {0.016} {} {0.071} {-5.398} {} {3} {(375.94, 134.56) (375.42, 134.20)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_auto_tl_other_masters_out_c_bits_data[34]} {} {0.000} {0.000} {0.017} {0.003} {0.071} {-5.398} {} {} {} 
+    INST {trans_dv_33463} {I} {v} {Z} {v} {} {BUFFD8BWP300H8P64PDLVT} {0.026} {0.000} {0.020} {} {0.097} {-5.372} {} {7} {(377.34, 134.56) (377.98, 134.55)} 
+    NET {} {} {} {} {} {MN_33463} {} {0.336} {0.000} {0.400} {0.071} {0.433} {-5.036} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U7156} {I1} {v} {Z} {v} {} {MUX2D2BWP300H8P64PDLVT} {0.102} {0.000} {0.017} {} {0.535} {-4.935} {} {1} {(376.90, 372.76) (376.32, 372.75)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core_io_fpu_dmem_resp_data[2]} {} {0.000} {0.000} {0.016} {0.002} {0.535} {-4.934} {} {} {} 
+    INST {trans_dv_33905} {I} {v} {Z} {v} {} {BUFFD8BWP300H8P64PDLVT} {0.019} {0.000} {0.009} {} {0.554} {-4.915} {} {4} {(375.68, 373.04) (376.32, 373.05)} 
+    NET {} {} {} {} {} {MN_33905} {} {0.019} {0.000} {0.050} {0.019} {0.573} {-4.896} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U3525} {A1} {v} {ZN} {v} {} {IOA21D2BWP300H8P64PDLVT} {0.032} {0.000} {0.007} {} {0.606} {-4.864} {} {1} {(355.71, 424.92) (355.97, 424.95)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core_io_fpu_fromint_data[2]} {} {0.000} {0.000} {0.009} {0.001} {0.606} {-4.863} {} {} {} 
+    INST {trans_dv_33662} {I} {v} {Z} {v} {} {BUFFD6BWP300H8P64PDLVT} {0.019} {0.000} {0.014} {} {0.625} {-4.845} {} {3} {(356.29, 424.96) (356.61, 424.95)} 
+    NET {} {} {} {} {} {MN_33662} {} {0.004} {0.000} {0.023} {0.014} {0.628} {-4.841} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U3830} {A1} {v} {ZN} {^} {} {ND2SKND3BWP300H8P64PDLVT} {0.014} {0.000} {0.016} {} {0.643} {-4.827} {} {1} {(344.58, 427.40) (344.45, 427.35)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n11157} {} {0.001} {0.000} {0.014} {0.002} {0.644} {-4.826} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U828} {A1} {^} {ZN} {^} {} {INR2D4BWP300H8P64PDLVT} {0.030} {0.000} {0.034} {} {0.673} {-4.796} {} {4} {(341.38, 425.00) (341.63, 424.95)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n19330} {} {0.003} {0.000} {0.049} {0.012} {0.677} {-4.792} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U3854} {A2} {^} {ZN} {v} {} {ND2SKND8BWP300H8P64PDLVT} {0.019} {0.000} {0.012} {} {0.696} {-4.773} {} {3} {(343.68, 425.56) (343.55, 425.55)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n19104} {} {0.001} {0.000} {0.012} {0.003} {0.697} {-4.773} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U3856} {A1} {v} {ZN} {v} {} {IAO21D4BWP300H8P64PDLVT} {0.022} {0.000} {0.010} {} {0.718} {-4.751} {} {1} {(342.27, 426.84) (342.66, 426.75)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n11189} {} {0.001} {0.000} {0.010} {0.002} {0.719} {-4.750} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U3857} {B} {v} {ZN} {^} {} {OAI31SKNOPTLD4BWP300H8P64PDLVT} {0.010} {0.000} {0.029} {} {0.729} {-4.740} {} {3} {(343.17, 425.60) (342.91, 425.60)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n12071} {} {0.001} {0.000} {0.036} {0.005} {0.730} {-4.739} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U576} {B1} {^} {ZN} {v} {} {INR2D6BWP300H8P64PDLVT} {0.019} {0.000} {0.014} {} {0.749} {-4.721} {} {2} {(340.48, 425.20) (340.35, 425.25)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n16573} {} {0.001} {0.000} {0.013} {0.004} {0.749} {-4.720} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U122} {B1} {v} {ZN} {^} {} {INR2D8BWP300H8P64PDLVT} {0.011} {0.000} {0.007} {} {0.760} {-4.709} {} {2} {(340.35, 425.00) (340.22, 424.95)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n9153} {} {0.001} {0.000} {0.009} {0.003} {0.761} {-4.708} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U1523} {A1} {^} {ZN} {v} {} {OAI31SKNOPTLD4BWP300H8P64PDLVT} {0.016} {0.000} {0.019} {} {0.777} {-4.693} {} {3} {(339.97, 423.80) (340.48, 423.80)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n18912} {} {0.001} {0.000} {0.024} {0.004} {0.777} {-4.692} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U9657} {B1} {v} {ZN} {^} {} {INR2OPTPAD4BWP300H8P64PDLVT} {0.013} {0.000} {0.008} {} {0.791} {-4.678} {} {2} {(337.79, 422.80) (337.54, 422.85)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n18915} {} {0.001} {0.000} {0.010} {0.002} {0.791} {-4.678} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U11081} {A1} {^} {ZN} {^} {} {IOA21D4BWP300H8P64PDLVT} {0.023} {0.000} {0.017} {} {0.814} {-4.655} {} {2} {(336.77, 423.12) (337.15, 423.15)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core_io_dmem_req_bits_addr[11]} {} {0.004} {0.000} {0.022} {0.007} {0.818} {-4.652} {} {} {} 
+    INST {U2156} {A1} {^} {ZN} {^} {} {IOA21D4BWP300H8P64PDLVT} {0.027} {0.000} {0.016} {} {0.844} {-4.625} {} {3} {(332.03, 402.48) (332.42, 402.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcacheArb_io_mem_req_bits_addr[11]} {} {0.001} {0.000} {0.019} {0.005} {0.845} {-4.624} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U156} {A1} {^} {ZN} {^} {} {IOA21D4BWP300H8P64PDLVT} {0.022} {0.000} {0.009} {} {0.868} {-4.601} {} {1} {(333.57, 399.12) (333.95, 399.15)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/n12841} {} {0.001} {0.000} {0.010} {0.003} {0.868} {-4.601} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/tg_35060} {I} {^} {Z} {^} {} {BUFFD18BWP300H8P64PDLVT} {0.017} {0.000} {0.007} {} {0.886} {-4.584} {} {1} {(333.63, 399.44) (334.98, 399.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/MN_35060} {} {0.234} {0.000} {0.400} {0.062} {1.120} {-4.349} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/tg_35061} {I} {^} {Z} {^} {} {BUFFD18BWP300H8P64PDLVT} {0.086} {0.000} {0.022} {} {1.206} {-4.263} {} {6} {(333.50, 172.04) (334.85, 172.05)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/MN_35061} {} {0.142} {0.000} {0.400} {0.060} {1.348} {-4.121} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U1507} {B1} {^} {ZN} {v} {} {INR2D8BWP300H8P64PDLVT} {0.066} {0.000} {0.051} {} {1.414} {-4.055} {} {1} {(124.80, 168.40) (124.67, 168.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/n13231} {} {0.001} {0.000} {0.038} {0.003} {1.415} {-4.054} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/tg_35058} {I} {v} {Z} {v} {} {BUFFD16BWP300H8P64PDLVT} {0.026} {0.000} {0.007} {} {1.441} {-4.029} {} {1} {(124.29, 167.84) (125.44, 167.85)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/MN_35058} {} {0.031} {0.000} {0.111} {0.030} {1.472} {-3.997} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U566} {I} {v} {ZN} {^} {} {INVD18BWP300H8P64PDLVT} {0.026} {0.000} {0.023} {} {1.498} {-3.971} {} {2} {(125.44, 75.16) (125.06, 75.15)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/n5085} {} {0.001} {0.000} {0.022} {0.012} {1.499} {-3.970} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U308} {I} {^} {ZN} {v} {} {INVD18BWP300H8P64PDLVT} {0.011} {0.000} {0.009} {} {1.510} {-3.960} {} {10} {(124.67, 75.44) (124.29, 75.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/n4843} {} {0.243} {0.000} {0.449} {0.143} {1.753} {-3.717} {} {} {} 
+  END_DATA_PATH
+  OTHER_ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {=} {Beginpoint Arrival Time} {0.000}
+  END_OTHER_ARR_CLC
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    PORT {} {clock} {^} {} {} {clock} {} {} {} {0.000} {0.000} {0.000} {5.469} {} {10} {(621.66, 0.00) } 
+    NET {} {} {} {} {} {clock} {} {0.000} {0.000} {0.000} {0.000} {0.000} {5.469} {} {} {} 
+    INST {snps_occ_controller/fast_clk_clkgt/U2} {A2} {^} {Z} {^} {} {AN2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {5.469} {} {1} {(611.01, 2.24) (610.94, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n5} {} {0.000} {0.000} {0.000} {0.000} {0.000} {5.469} {} {} {} 
+    INST {snps_occ_controller/U2} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {5.469} {} {1} {(608.83, 2.24) (608.90, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n1} {} {0.000} {0.000} {0.000} {0.000} {0.000} {5.469} {} {} {} 
+    INST {snps_occ_controller/U1} {B1} {v} {ZN} {^} {} {IND2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {5.469} {} {607} {(609.98, 3.44) (609.92, 3.45)} 
+    NET {} {} {} {} {} {subsystem_cbus_auto_fixedClockNode_out_0_clock} {} {0.000} {0.000} {0.000} {0.000} {0.000} {5.469} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 5
+PATH 6
+  VIEW  WorstLT_cworst_CCworst_T_func
+  CHECK_TYPE {Recovery Check}
+  REF {tile_prci_domain_tile_reset_domain_tile_dcache/data_data_arrays_0_data_arrays_0_ext_1_memory_32x256_12} {CLK}
+  ENDPT {tile_prci_domain_tile_reset_domain_tile_dcache/data_data_arrays_0_data_arrays_0_ext_1_memory_32x256_12} {SD} {TS6N7LVTB32X16M1WBZHOCP} {v} {leading} {CPU_CLK} {CPU_CLK(C)(P)(WorstLT_cworst_CCworst_T_func)*}
+  BEGINPT {tile_prci_domain_tile_reset_domain_tile_dcache/s2_data_reg_34_} {Q} {SDFQD2BWP300H11P64PDSVT} {v} {leading} {CPU_CLK} {CPU_CLK(D)(P)(WorstLT_cworst_CCworst_T_func)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {Recovery} {4.450}
+    {+} {Phase Shift} {0.833}
+    {+} {CPPR Adjustment} {0.000}
+    {-} {Uncertainty} {0.100}
+    {=} {Required Time} {-3.717}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {1.750}
+    {=} {Slack Time} {-5.467}
+  END_SLK_CLC
+  SLK -5.467
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {=} {Beginpoint Arrival Time} {0.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    PORT {} {clock} {^} {} {} {clock} {} {} {} {0.000} {0.000} {0.000} {-5.467} {} {10} {(621.66, 0.00) } 
+    NET {} {} {} {} {} {clock} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-5.467} {} {} {} 
+    INST {snps_occ_controller/fast_clk_clkgt/U2} {A2} {^} {Z} {^} {} {AN2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-5.467} {} {1} {(611.01, 2.24) (610.94, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n5} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-5.467} {} {} {} 
+    INST {snps_occ_controller/U2} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-5.467} {} {1} {(608.83, 2.24) (608.90, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n1} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-5.467} {} {} {} 
+    INST {snps_occ_controller/U1} {B1} {v} {ZN} {^} {} {IND2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-5.467} {} {607} {(609.98, 3.44) (609.92, 3.45)} 
+    NET {} {} {} {} {} {subsystem_cbus_auto_fixedClockNode_out_0_clock} {} {0.000} {0.000} {0.003} {0.000} {0.000} {-5.467} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/latch} {CP} {^} {Q} {^} {} {CKLNQD1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-5.467} {} {1} {(303.17, 387.44) (303.42, 387.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/n6} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-5.467} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/U1} {I0} {^} {Z} {^} {} {MUX2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-5.467} {} {64} {(304.32, 386.84) (304.26, 386.85)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/net105655} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-5.467} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/s2_data_reg_34_} {CP} {^} {Q} {v} {} {SDFQD2BWP300H11P64PDSVT} {0.071} {0.000} {0.016} {} {0.071} {-5.396} {} {3} {(375.94, 134.56) (375.42, 134.20)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_auto_tl_other_masters_out_c_bits_data[34]} {} {0.000} {0.000} {0.017} {0.003} {0.071} {-5.395} {} {} {} 
+    INST {trans_dv_33463} {I} {v} {Z} {v} {} {BUFFD8BWP300H8P64PDLVT} {0.026} {0.000} {0.020} {} {0.097} {-5.369} {} {7} {(377.34, 134.56) (377.98, 134.55)} 
+    NET {} {} {} {} {} {MN_33463} {} {0.336} {0.000} {0.400} {0.071} {0.433} {-5.034} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U7156} {I1} {v} {Z} {v} {} {MUX2D2BWP300H8P64PDLVT} {0.102} {0.000} {0.017} {} {0.535} {-4.932} {} {1} {(376.90, 372.76) (376.32, 372.75)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core_io_fpu_dmem_resp_data[2]} {} {0.000} {0.000} {0.016} {0.002} {0.535} {-4.932} {} {} {} 
+    INST {trans_dv_33905} {I} {v} {Z} {v} {} {BUFFD8BWP300H8P64PDLVT} {0.019} {0.000} {0.009} {} {0.554} {-4.913} {} {4} {(375.68, 373.04) (376.32, 373.05)} 
+    NET {} {} {} {} {} {MN_33905} {} {0.019} {0.000} {0.050} {0.019} {0.573} {-4.893} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U94} {A1} {v} {ZN} {v} {} {IOA21D4BWP300H8P64PDLVT} {0.043} {0.000} {0.033} {} {0.616} {-4.850} {} {7} {(355.84, 425.28) (356.22, 425.25)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n_ex_op2_T[2]} {} {0.001} {0.000} {0.039} {0.015} {0.618} {-4.849} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U1095} {A1} {v} {ZN} {v} {} {INR2D2BWP300H8P64PDLVT} {0.027} {0.000} {0.014} {} {0.645} {-4.821} {} {2} {(345.60, 426.40) (345.73, 426.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n13506} {} {0.000} {0.000} {0.013} {0.002} {0.645} {-4.821} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U791} {B1} {v} {ZN} {^} {} {INR3OPTPAD2BWP300H8P64PDLVT} {0.013} {0.000} {0.013} {} {0.659} {-4.808} {} {1} {(346.18, 425.20) (346.24, 425.16)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n11167} {} {0.000} {0.000} {0.018} {0.001} {0.659} {-4.808} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U3841} {B1} {^} {ZN} {v} {} {INR3OPTPAD4BWP300H8P64PDLVT} {0.019} {0.000} {0.019} {} {0.678} {-4.789} {} {2} {(346.30, 425.00) (346.11, 425.04)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n11186} {} {0.001} {0.000} {0.024} {0.007} {0.679} {-4.788} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U3854} {A1} {v} {ZN} {^} {} {ND2SKND8BWP300H8P64PDLVT} {0.012} {0.000} {0.012} {} {0.691} {-4.776} {} {3} {(343.81, 425.52) (343.55, 425.55)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n19104} {} {0.001} {0.000} {0.010} {0.003} {0.691} {-4.776} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U3856} {A1} {^} {ZN} {^} {} {IAO21D4BWP300H8P64PDLVT} {0.021} {0.000} {0.009} {} {0.712} {-4.755} {} {1} {(342.27, 426.84) (342.66, 426.75)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n11189} {} {0.001} {0.000} {0.012} {0.002} {0.712} {-4.754} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U3857} {B} {^} {ZN} {v} {} {OAI31SKNOPTLD4BWP300H8P64PDLVT} {0.018} {0.000} {0.021} {} {0.730} {-4.737} {} {3} {(343.17, 425.60) (342.91, 425.60)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n12071} {} {0.001} {0.000} {0.024} {0.004} {0.731} {-4.736} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U576} {B1} {v} {ZN} {^} {} {INR2D6BWP300H8P64PDLVT} {0.016} {0.000} {0.011} {} {0.747} {-4.720} {} {2} {(340.48, 425.20) (340.35, 425.25)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n16573} {} {0.001} {0.000} {0.014} {0.004} {0.748} {-4.719} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U122} {B1} {^} {ZN} {v} {} {INR2D8BWP300H8P64PDLVT} {0.010} {0.000} {0.007} {} {0.758} {-4.709} {} {2} {(340.35, 425.00) (340.22, 424.95)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n9153} {} {0.001} {0.000} {0.007} {0.003} {0.758} {-4.708} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U1523} {A1} {v} {ZN} {^} {} {OAI31SKNOPTLD4BWP300H8P64PDLVT} {0.021} {0.000} {0.028} {} {0.780} {-4.687} {} {3} {(339.97, 423.80) (340.48, 423.80)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n18912} {} {0.001} {0.000} {0.035} {0.005} {0.780} {-4.686} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U11080} {A1} {^} {ZN} {v} {} {ND2SKND2BWP300H8P64PDLVT} {0.017} {0.000} {0.013} {} {0.797} {-4.669} {} {1} {(337.41, 423.40) (337.28, 423.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core/n18913} {} {0.000} {0.000} {0.014} {0.002} {0.797} {-4.669} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_core/U11081} {B} {v} {ZN} {^} {} {IOA21D4BWP300H8P64PDLVT} {0.014} {0.000} {0.017} {} {0.811} {-4.655} {} {2} {(337.02, 423.20) (337.15, 423.15)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core_io_dmem_req_bits_addr[11]} {} {0.004} {0.000} {0.022} {0.007} {0.815} {-4.652} {} {} {} 
+    INST {U2156} {A1} {^} {ZN} {^} {} {IOA21D4BWP300H8P64PDLVT} {0.027} {0.000} {0.016} {} {0.842} {-4.625} {} {3} {(332.03, 402.48) (332.42, 402.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcacheArb_io_mem_req_bits_addr[11]} {} {0.001} {0.000} {0.019} {0.005} {0.843} {-4.624} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U156} {A1} {^} {ZN} {^} {} {IOA21D4BWP300H8P64PDLVT} {0.022} {0.000} {0.009} {} {0.865} {-4.601} {} {1} {(333.57, 399.12) (333.95, 399.15)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/n12841} {} {0.001} {0.000} {0.010} {0.003} {0.866} {-4.601} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/tg_35060} {I} {^} {Z} {^} {} {BUFFD18BWP300H8P64PDLVT} {0.017} {0.000} {0.007} {} {0.883} {-4.584} {} {1} {(333.63, 399.44) (334.98, 399.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/MN_35060} {} {0.234} {0.000} {0.400} {0.062} {1.118} {-4.349} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/tg_35061} {I} {^} {Z} {^} {} {BUFFD18BWP300H8P64PDLVT} {0.086} {0.000} {0.022} {} {1.204} {-4.263} {} {6} {(333.50, 172.04) (334.85, 172.05)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/MN_35061} {} {0.142} {0.000} {0.400} {0.060} {1.346} {-4.121} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U1507} {B1} {^} {ZN} {v} {} {INR2D8BWP300H8P64PDLVT} {0.066} {0.000} {0.051} {} {1.412} {-4.055} {} {1} {(124.80, 168.40) (124.67, 168.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/n13231} {} {0.001} {0.000} {0.038} {0.003} {1.413} {-4.054} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/tg_35058} {I} {v} {Z} {v} {} {BUFFD16BWP300H8P64PDLVT} {0.025} {0.000} {0.007} {} {1.438} {-4.029} {} {1} {(124.29, 167.84) (125.44, 167.85)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/MN_35058} {} {0.031} {0.000} {0.111} {0.030} {1.469} {-3.997} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U566} {I} {v} {ZN} {^} {} {INVD18BWP300H8P64PDLVT} {0.026} {0.000} {0.023} {} {1.495} {-3.971} {} {2} {(125.44, 75.16) (125.06, 75.15)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/n5085} {} {0.001} {0.000} {0.022} {0.012} {1.496} {-3.970} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U308} {I} {^} {ZN} {v} {} {INVD18BWP300H8P64PDLVT} {0.011} {0.000} {0.009} {} {1.507} {-3.960} {} {10} {(124.67, 75.44) (124.29, 75.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/n4843} {} {0.243} {0.000} {0.449} {0.143} {1.750} {-3.717} {} {} {} 
+  END_DATA_PATH
+  OTHER_ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {=} {Beginpoint Arrival Time} {0.000}
+  END_OTHER_ARR_CLC
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    PORT {} {clock} {^} {} {} {clock} {} {} {} {0.000} {0.000} {0.000} {5.467} {} {10} {(621.66, 0.00) } 
+    NET {} {} {} {} {} {clock} {} {0.000} {0.000} {0.000} {0.000} {0.000} {5.467} {} {} {} 
+    INST {snps_occ_controller/fast_clk_clkgt/U2} {A2} {^} {Z} {^} {} {AN2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {5.467} {} {1} {(611.01, 2.24) (610.94, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n5} {} {0.000} {0.000} {0.000} {0.000} {0.000} {5.467} {} {} {} 
+    INST {snps_occ_controller/U2} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {5.467} {} {1} {(608.83, 2.24) (608.90, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n1} {} {0.000} {0.000} {0.000} {0.000} {0.000} {5.467} {} {} {} 
+    INST {snps_occ_controller/U1} {B1} {v} {ZN} {^} {} {IND2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {5.467} {} {607} {(609.98, 3.44) (609.92, 3.45)} 
+    NET {} {} {} {} {} {subsystem_cbus_auto_fixedClockNode_out_0_clock} {} {0.000} {0.000} {0.000} {0.000} {0.000} {5.467} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 6
+PATH 7
+  VIEW  WorstLT_cworst_CCworst_T_func
+  CHECK_TYPE {Setup Check}
+  REF {tile_prci_domain_tile_reset_domain_tile_fpuOpt/load_wb_data_reg_2_} {CP}
+  ENDPT {tile_prci_domain_tile_reset_domain_tile_fpuOpt/load_wb_data_reg_2_} {D} {SDFQD2BWP300H11P64PDSVT} {v} {leading} {CPU_CLK} {CPU_CLK(C)(P)(WorstLT_cworst_CCworst_T_func)*}
+  BEGINPT {tile_prci_domain_tile_reset_domain_tile_dcache/s2_data_reg_34_} {Q} {SDFQD2BWP300H11P64PDSVT} {v} {leading} {CPU_CLK} {CPU_CLK(D)(P)(WorstLT_cworst_CCworst_T_func)*}
+  REQ_CLC
+    {} {Other End Arrival Time} {0.000}
+    {-} {Setup} {0.049}
+    {+} {Phase Shift} {0.833}
+    {+} {CPPR Adjustment} {0.000}
+    {-} {Uncertainty} {0.100}
+    {=} {Required Time} {0.684}
+  END_REQ_CLC
+  SLK_CLC
+    {-} {Arrival Time} {0.633}
+    {=} {Slack Time} {0.051}
+  END_SLK_CLC
+  SLK 0.051
+  ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {=} {Beginpoint Arrival Time} {0.000}
+  END_ARR_CLC
+  LAUNCH_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    PORT {} {clock} {^} {} {} {clock} {} {} {} {0.000} {0.000} {0.000} {0.051} {} {10} {(621.66, 0.00) } 
+    NET {} {} {} {} {} {clock} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.051} {} {} {} 
+    INST {snps_occ_controller/fast_clk_clkgt/U2} {A2} {^} {Z} {^} {} {AN2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.051} {} {1} {(611.01, 2.24) (610.94, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n5} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.051} {} {} {} 
+    INST {snps_occ_controller/U2} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.051} {} {1} {(608.83, 2.24) (608.90, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n1} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.051} {} {} {} 
+    INST {snps_occ_controller/U1} {B1} {v} {ZN} {^} {} {IND2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.051} {} {607} {(609.98, 3.44) (609.92, 3.45)} 
+    NET {} {} {} {} {} {subsystem_cbus_auto_fixedClockNode_out_0_clock} {} {0.000} {0.000} {0.003} {0.000} {0.000} {0.051} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/latch} {CP} {^} {Q} {^} {} {CKLNQD1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.051} {} {1} {(303.17, 387.44) (303.42, 387.45)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/n6} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.051} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/clk_gate_s2_data_reg/U1} {I0} {^} {Z} {^} {} {MUX2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {0.051} {} {64} {(304.32, 386.84) (304.26, 386.85)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_dcache/net105655} {} {0.000} {0.000} {0.000} {0.000} {0.000} {0.051} {} {} {} 
+  END_LAUNCH_CLK_PATH 
+  DATA_PATH 
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/s2_data_reg_34_} {CP} {^} {Q} {v} {} {SDFQD2BWP300H11P64PDSVT} {0.071} {0.000} {0.016} {} {0.071} {0.122} {} {3} {(375.94, 134.56) (375.42, 134.20)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_auto_tl_other_masters_out_c_bits_data[34]} {} {0.000} {0.000} {0.017} {0.003} {0.071} {0.122} {} {} {} 
+    INST {trans_dv_33463} {I} {v} {Z} {v} {} {BUFFD8BWP300H8P64PDLVT} {0.026} {0.000} {0.020} {} {0.097} {0.149} {} {7} {(377.34, 134.56) (377.98, 134.55)} 
+    NET {} {} {} {} {} {MN_33463} {} {0.336} {0.000} {0.400} {0.071} {0.433} {0.484} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_dcache/U7156} {I1} {v} {Z} {v} {} {MUX2D2BWP300H8P64PDLVT} {0.102} {0.000} {0.017} {} {0.535} {0.586} {} {1} {(376.90, 372.76) (376.32, 372.75)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_core_io_fpu_dmem_resp_data[2]} {} {0.000} {0.000} {0.016} {0.002} {0.535} {0.586} {} {} {} 
+    INST {trans_dv_33905} {I} {v} {Z} {v} {} {BUFFD8BWP300H8P64PDLVT} {0.019} {0.000} {0.009} {} {0.554} {0.605} {} {4} {(375.68, 373.04) (376.32, 373.05)} 
+    NET {} {} {} {} {} {MN_33905} {} {0.013} {0.000} {0.048} {0.019} {0.567} {0.618} {} {} {} 
+    INST {tg_35068} {I} {v} {Z} {v} {} {BUFFD0BWP300H8P64PDLVT} {0.032} {0.000} {0.016} {} {0.600} {0.651} {} {1} {(375.81, 403.36) (375.87, 403.35)} 
+    NET {} {} {} {} {} {MN_35068} {} {0.000} {0.000} {0.019} {0.002} {0.600} {0.651} {} {} {} 
+    INST {tg_35069} {I} {v} {Z} {v} {} {BUFFD10BWP300H8P64PDLVT} {0.019} {0.000} {0.007} {} {0.619} {0.670} {} {1} {(375.62, 404.24) (376.45, 404.25)} 
+    NET {} {} {} {} {} {MN_35069} {} {0.014} {0.000} {0.026} {0.016} {0.633} {0.684} {} {} {} 
+  END_DATA_PATH
+  OTHER_ARR_CLC
+    {} {Clock Rise Edge} {0.000}
+    {=} {Beginpoint Arrival Time} {0.000}
+  END_OTHER_ARR_CLC
+  CAP_CLK_PATH
+    COLUMNS {instance} {fpin} {fedge} {tpin} {tedge} {net} {cell} {delay} {incr_delay} {slew} {load} {arrival} {required} {stolen} {fanout} {pin_location}
+    PORT {} {clock} {^} {} {} {clock} {} {} {} {0.000} {0.000} {0.000} {-0.051} {} {10} {(621.66, 0.00) } 
+    NET {} {} {} {} {} {clock} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.051} {} {} {} 
+    INST {snps_occ_controller/fast_clk_clkgt/U2} {A2} {^} {Z} {^} {} {AN2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.051} {} {1} {(611.01, 2.24) (610.94, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n5} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.051} {} {} {} 
+    INST {snps_occ_controller/U2} {B} {^} {ZN} {v} {} {IOA21D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.051} {} {1} {(608.83, 2.24) (608.90, 2.25)} 
+    NET {} {} {} {} {} {snps_occ_controller/n1} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.051} {} {} {} 
+    INST {snps_occ_controller/U1} {B1} {v} {ZN} {^} {} {IND2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.051} {} {607} {(609.98, 3.44) (609.92, 3.45)} 
+    NET {} {} {} {} {} {subsystem_cbus_auto_fixedClockNode_out_0_clock} {} {0.000} {0.000} {0.003} {0.000} {0.000} {-0.051} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_fpuOpt/clk_gate_load_wb_tag_reg/latch} {CP} {^} {Q} {^} {} {CKLNQD1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.051} {} {1} {(436.42, 404.24) (436.67, 404.25)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_fpuOpt/clk_gate_load_wb_tag_reg/n6} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.051} {} {} {} 
+    INST {tile_prci_domain_tile_reset_domain_tile_fpuOpt/clk_gate_load_wb_tag_reg/U1} {I0} {^} {Z} {^} {} {MUX2D1BWP300H11P64PDSVT} {0.000} {0.000} {0.000} {} {0.000} {-0.051} {} {70} {(436.54, 403.96) (436.61, 403.95)} 
+    NET {} {} {} {} {} {tile_prci_domain_tile_reset_domain_tile_fpuOpt/net78739} {} {0.000} {0.000} {0.000} {0.000} {0.000} {-0.051} {} {} {} 
+  END_CAP_CLK_PATH
+END_PATH 7
